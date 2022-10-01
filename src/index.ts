@@ -1,6 +1,9 @@
 import "./style/style.scss"
-import "./Ts/app"
+import { InputElement, ProjectStatus, ProjectResult } from "./Ts/app"
 
-console.log( 'typescript' )
+const input_Element = new InputElement()
+export const project_Status = ProjectStatus.getInstance()
+const active_project_result = new ProjectResult("active")
+const finished_project_result = new ProjectResult("finished")
 
-console.log( "checked" );
+

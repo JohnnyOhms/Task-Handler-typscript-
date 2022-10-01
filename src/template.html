@@ -18,22 +18,24 @@
                 <div class="head d-flex justify-content-center m-1">
                     <h1>Task Handler</h1>
                 </div>
-                <form action="" class="d-grid mt-1 border border-2 rounded-2 p-3 bg-light text-dark">
+                <form action="" type="submit" id="form-input"
+                    class="d-grid mt-1 border border-2 rounded-2 p-3 bg-light text-dark" autocomplete="off">
                     <div class="form-group py-3">
                         <label for="exampleFormControlInput1" class="mb-2">TITLE: </label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Title">
+                        <input type="text" class="form-control title-input" id=" exampleFormControlInput1"
+                            placeholder="Title">
                     </div>
                     <div class="form-group py-3">
                         <label for="exampleFormControlInput1" class="mb-2">DESCRIPTION: </label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Description">
+                        <input type="text" class="form-control des-input" id=" exampleFormControlInput1"
+                            placeholder="Description">
                     </div>
                     <div class="form-group py-3">
-                        <label for="exampleFormControlInput1 fs-4 my-4" class="mb-2">NO OF TASK: </label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="No. of task">
+                        <label for="exampleFormControlInput1 fs-4 my-4" class="mb-2">NO OF TASK: FROM 1 - 30 </label>
+                        <input type="text" class="form-control num-input" id=" exampleFormControlInput1"
+                            placeholder="No. of task">
                     </div>
-                    <div class="btn border border-0 d-grid justify-content-start m-0 p-0 mt-1">
-                        <button type="button" class="btn btn-primary p-2">ADD TASK</button>
-                    </div>
+                    <button type="button" class="btn btn-primary p-2 btn-submit">ADD TASK</button>
                 </form>
             </div>
 
@@ -42,8 +44,8 @@
                     <div class="title">
                         <h3>Active Task</h3>
                     </div>
-                    <!-- <div class="list-group border border-1">
-                        <button type="button" class="list-group-item list-group-item-action m-2 border border-2">
+                    <div class="active-list-group border border-1 pb-5">
+                        <!-- <button type="button" class="list-group-item list-group-item-action m-2 border border-2 target-btn">
                             <ul class="task-list">
                                 <li>
                                     <strong>webpack tutor</strong>
@@ -51,15 +53,16 @@
                                 <li>html</li>
                                 <li>css</li>
                             </ul>
-                        </button>
-                    </div> -->
+                        </button> -->
+                    </div>
                 </div>
 
                 <div class="row table d-grid my-3 mx-3">
                     <div class="title">
                         <h3>Finished Task</h3>
                     </div>
-
+                    <div class="finished-list-group border border-1 pb-5"></div>
+                    </div>
                 </div>
             </div>
         </div>

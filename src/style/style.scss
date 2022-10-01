@@ -4,8 +4,13 @@ $body-color: white;
 
 body {
     background-color: $body-color;
+    
+    li {
+        list-style-type: none;
+    }
+    
+    .list-group-item{
+        cursor: move;
+    }
 }
 
-li {
-    list-style-type: none;
-}

@@ -1,44 +1,23 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-
 module.exports = {
     entry: {
         main: "./src/index.ts",
         vendor: "./src/vendor.ts"
     },
-    plugins: [
-        new MiniCssExtractPlugin({ filename: "style.bundle.css" }),
-    ],
     module: {
         rules: [
+            {
+            test: /\.html$/i,
+            loader: "html-loader",  
+            },
             {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
-            // {
-            //     test: /\.(scss)$/i,
-            //     use: [
-            //         {
-            //             loader: MiniCssExtractPlugin.loader
-            //         },
-            //         {
-            //             loader: 'css-loader'
-            //         },
-            //         {
-            //             loader: 'postcss-loader',
-            //             options: {
-            //                 postcssOptions: {
-            //                     plugins: () => [
-            //                         require('autoprefixer')
-            //                     ]
-            //                 }
-            //             }
-            //         },
-            //         {
-            //             loader: 'sass-loader'
-            //         }
-            //     ]
-            // },
+            {
+                test: /\.s[ac]ss$/i,
+                use: ["style-loader", "css-loader", "sass-loader",],
+            },
         ],
     },
     resolve: {
